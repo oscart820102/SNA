@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
 $("li").click(function() {
 	if(this.id == '1')
 	{
@@ -20,4 +20,4 @@ $("li").click(function() {
 	}
 	});
 });
-$('.carousel').carousel();
+$('.carousel').carousel();*/
