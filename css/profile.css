@@ -1,0 +1,105 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  -webkit-transition: 0.3s ease-in-out;
+     -moz-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+body{
+  background-color: #f5f5f5;
+}
+
+h2{
+ text-align: center;
+}
+
+/*==================================NAV BAR===================================*/
+.my-nav{
+  background: linear-gradient(to bottom, #426184 0%,#364f6b 100%);
+  height: 54px;
+  width: 100%;
+}
+.logo{
+  font-family: permanent-marker, sans-serif;
+  font-size: 36px;
+  color: white;
+}
+.logo:hover{
+  color: #3fcec9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.picsize{
+  border: solid 5px #364f6b;
+  border-radius: 3px;
+}
+
+/*==================================PROFILE===================================*/
+.top {
+  height:280px;
+  background-color: white;
+  margin: 10px 8.33%;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px #555555;
+}
+.title {
+  font-size: 30px;
+  font-style: bold ;
+}
+.r20 {
+  margin-right: 20px ;
+}
+
+.name {
+  margin-left: 10px ;
+  font-size: 30px ;
+  width: 230px ;
+  align-content: center;
+}
+
+.mid {
+  height: 600px;
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  margin-bottom: 20px;
+}
+/*==================================UPLOAD====================================*/
+.mid-left{
+  border: solid 1px black;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px #555555;
+  height: 550px;
+}
+video {
+    margin-top: 10px;
+    margin-left:8px;
+    width: 100% !important;
+    height: auto !important;
+}
+.uploadb{
+  margin-top: 35px;
+  margin-left: 20px;
+  text-align: center;
+}
+.morevideo{
+  margin-top: 10px;
+  font-size: 10px;
+  margin-left: 68%;
+}
+/*==================================RECORD====================================*/
+.mid-right{
+  padding-right: 0;
+}
+.right-content{
+  border: solid 1px black;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px #555555;
+}
+.frame {
+  width: 100%;
+  height: 550px ;
+}

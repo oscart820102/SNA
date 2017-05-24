@@ -1,0 +1,97 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          
+  -webkit-transition: 0.3s ease-in-out;
+     -moz-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+.row.content {
+  height: 450px
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: linear-gradient(to bottom, #426184 0%,#364f6b 100%);
+}
+.navbar-inverse{
+  height: 54px;
+  background: linear-gradient(to bottom, #426184 0%,#364f6b 100%);
+}
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+footer {
+  color: white;
+  height: 100px;
+  padding: 30px;
+}
+/*================================NAV BAR=====================================*/
+.navbar-inverse .navbar-brand{
+  font-family: permanent-marker, sans-serif;
+  font-size: 36px;
+  color: white;
+}
+.navbar-inverse .navbar-brand:hover{
+  color: #3fcec9;
+}
+.navbar-inverse .navbar-nav li > a{
+  font-size: 15px;
+  color: white;
+}
+.navbar-inverse .navbar-nav li > a:hover{
+  color: #3fcec9;
+
+}
+.log-in{
+  display: none;
+}
+
+.featureImage{
+    width: auto;
+    width: 500px;
+}
+
+/*================================BIG IMG=====================================*/
+.text-center{
+  padding: 0;
+}
+.adjustIntro{
+    float:left;
+    height:50%; /*父元素高度的50%*/
+    margin-bottom:-150px;/*置中元素高度的一半*/
+}
+.adjust{
+    float:left;
+    height:50%;
+    margin-bottom:-225px;
+}
+.feature{
+    margin-bottom: 50px;
+}
+.featuresText{
+    margin-bottom: 30px;
+}
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid #A0A0A0;
+    width: 90%;
+}
