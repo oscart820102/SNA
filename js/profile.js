@@ -26,3 +26,28 @@
   var inputNode = document.querySelector('input')
   inputNode.addEventListener('change', playSelectedFile, false)
 })()
+
+$('.message').hover(function(){
+	$('.message-text').css('opacity',1);
+},function(){
+	$('.message-text').css('opacity',0)
+})
+
+$('.mid-left-btn').click(function(){
+	$('.mid-left').animate({marginLeft:"0"},{duration:500,queue:false})
+	$('.mid-right').animate({marginRight:"-100%"},{duration:100,queue:false})
+	$('.mid-left-btn').animate({left:"100%"},{duration:500,queue:false})
+	$('.mid-right-btn').animate({right:"0"},{duration:100,queue:false})
+	// setTimeout(function(){$('.mid-right-btn').css('display','block')},1000)
+	$('.mid-right-btn').delay(850).fadeIn("slow")
+	setTimeout(function(){$('.mid-left-btn').css('display','none')},1000)
+
+})
+$('.mid-right-btn').click(function(){
+	$('.mid-right-btn').animate({right:"100%"},{duration:100,queue:false})
+	$('.mid-left-btn').animate({left:"0"},{duration:100,queue:false})
+	$('.mid-right').animate({marginRight:"0"},{duration:500,queue:false})
+	$('.mid-left').animate({marginLeft:"-100%"},{duration:100,queue:false})
+	$('.mid-left-btn').delay(500).fadeIn("slow")
+	setTimeout(function(){$('.mid-right-btn').css('display','none')},1000)
+})
