@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>SNA_Test</title>
+  <title>Profile</title>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -18,32 +18,51 @@
     <h2 class="text-center userName">Mr. Minion</h2>
     <div class="row">
       <div class="col-md-offset-2 col-md-8 profile-top">
-        <h4 class="message-text">傳個訊息給我吧</h4>
+        <h4 class="message-text">傳個訊息  給我吧</h4>
         <div class="icon-border message">
           <img src="img/icon1.svg" alt="message me" width="35px">
         </div>
         <img src="img/minion.jpeg" class="photo img-circle" alt="profile-photo" width="200px">
-        <div class="icon-border commented">
+        <div class="icon-border commented"  data-toggle="modal" data-target="#myModal">
           <img src="img/icon2.svg" alt="what did swaper say to me" width="35px">
         </div>
-        <h4 class="commented-text">曾經跟我交換的人<br>怎麼說</h4>
+        <h4 class="commented-text">跟我交換的人怎麼說</h4>
       </div>
     </div>
-
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">FeedBack</h4>
+          </div>
+          <div class="modal-body">
+            <h4>用＿＿跟我交換＿＿的曾小姐說：</h4><br>
+            I LOVE YOU
+            <hr>
+            <h4>用＿＿跟我交換＿＿的李先生說：</h4><br>
+            WTF
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
-  <div class="mid row col-md-12">
+  <div class="mid row col-md-12 col-sm-12 col-xs-12">
     <div class="mid-left-btn">
       <h3>個人簡介</h3>
     </div>
     <div class="mid-right-btn">
       <h3>作品集</h3>
     </div>
-    <div class="mid-left col-md-12">
-      <h2 class="text-left personal col-md-2">個人簡介</h2>
-      <p class="col-md-10">你好，我是○○○，我對金融業有絕大的信心和熱忱，因為我擁有專業的金融知識，利用一年時間積
+    <div class="mid-left col-md-12 col-sm-12 col-xs-12">
+      <h2 class="text-left personal">個人簡介</h2>
+      <p class="mid-left-content">你好，我是○○○，我對金融業有絕大的信心和熱忱，因為我擁有專業的金融知識，利用一年時間積
         極考去取十張證照，在財務個案分析方面也有研究，另外也具有豐富的實習經驗(拿出財富管理競賽
         作品、實習在職證明給面試官看) 我的個性是樂於與人相處的，服務客人時遇到不同情況也應對進
         退得宜，凡事不斤斤計較，做事不拖泥帶水，在學校參與過許多活動，所以與人相處融洽是我能做
@@ -57,16 +76,37 @@
 
     </div>
 
-    <div class="mid-right col-md-12">
-      <div class="mid-right-content ">
+
+    <div class="mid-right col-md-12 col-sm-12 col-xs-12">
+      <div class="mid-right-content">
         <div id=message></div>
         <input class="uploadb" type="file" accept="video/*" />
         <video controls autoplay></video>
         <button class="btn btn-primary morevideo">更多作品..</button>
       </div>
-      <h2 class="text-right feature col-md-2">作品集</h2>
+      <h2 class="text-right feature">作品集</h2>
     </div>
   </div>
+
+    <div class="i-can-change col-md-12 col-sm-12 col-xs-12">
+      <div class="i-want-title col-md-6 col-sm-6 col-xs-12">
+        <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
+        <h4>我可以交換</h4>
+      </div>
+      <div class="i-want-content col-md-6 col-sm-6 col-xs-12">
+
+      </div>
+    </div>
+    <div class="i-want-learn col-md-12 col-sm-12 col-xs-12">
+      <div class="i-want-content col-md-6 col-sm-6 col-xs-12">
+
+      </div>
+      <div class="i-want-title col-md-6 col-sm-6 col-xs-12">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+        <h4>我想要學習</h4>
+      </div>
+    </div>
+
   <h2 class="swap-record text-center col-md-12">交換紀錄</h2>
   <div class="col-md-offset-1 col-md-10 bottom">
     <div class="right-content">
