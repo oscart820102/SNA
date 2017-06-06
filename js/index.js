@@ -8,36 +8,45 @@ var config = {
   messagingSenderId: "296131393218"
 };
 firebase.initializeApp(config);
-
+var provider = new firebase.auth.FacebookAuthProvider();
 var db          = firebase.database() ;
 var rootRef     = db.ref() ;
 var usersRef    = db.ref("users");
 
-// $(document).ready(function(){
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     var vm=this;
-//       if (user){
-//         // save usr public data  (*1)
-//         var userData = user.toJSON();
-//         usersRef
-//           .child (userData.uid)
-//           .update(userData)
-//           .catch(errorCallback)
-//         // update vue to login status
-//         vm.$set(vm.data, "currentUser" , userData )
-//
-//       }else{
-//         // update vue to logout status
-//         vm.$set(vm.data, "currentUser" ,null)
-//
-//       }
-//     })
-// })
-//
+$(document).ready(function(){
+  firebase.auth().onAuthStateChanged(function(user) {
+    var vm=this;
+      if (user){
+        // save usr public data  (*1)
+        var userData = user.toJSON();
+        usersRef
+          .child (userData.uid)
+          .update(userData)
+          .catch(errorCallback)
+        // update vue to login status
+
+      }else{
+        // update vue to logout status
+      }
+    })
+})
+
 var errorCallback = function(error){ alert(error.message)}
 
 $('.log-in').click(function(){
-  var provider = new firebase.auth.FacebookAuthProvider();
-  firebase.auth().signInWithPopup(provider).catch(errorCallback);
-  console.log("click login");
+
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+  var token = result.credential.accessToken;
+  var user = result.user;
+  console.log(token);
+  console.log(user);
+  $('.log-in').css('display','none')
+  $('.loged').css('display','block')
+}).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  var email = error.email;
+  var credential = error.credential;
+});
 })
