@@ -1,4 +1,29 @@
-(function localFileVideoPlayer() {
+var config = {
+  apiKey: "AIzaSyCjkfmg2MFFocIDBdQuplLOOflyD2roLQM",
+  authDomain: "sna-final.firebaseapp.com",
+  databaseURL: "https://sna-final.firebaseio.com",
+  projectId: "sna-final",
+  storageBucket: "sna-final.appspot.com",
+  messagingSenderId: "296131393218"
+};
+firebase.initializeApp(config);
+var provider = new firebase.auth.FacebookAuthProvider();
+var db          = firebase.database() ;
+var rootRef     = db.ref() ;
+var usersRef    = db.ref("users");
+
+
+	firebase.auth().onAuthStateChanged(function(user) {
+		console.log(user);
+		if(user){
+			$('.userName').text(user.displayName)
+		}else{
+
+		}
+	})
+
+
+var localFileVideoPlayer =function(){
 	'use strict'
   var URL = window.URL || window.webkitURL
   var displayMessage = function (message, isError) {
@@ -25,7 +50,7 @@
   }
   var inputNode = document.querySelector('input')
   inputNode.addEventListener('change', playSelectedFile, false)
-})()
+}
 
 $('.message').hover(function(){
 	$('.message-text').css('opacity',1);
@@ -43,6 +68,7 @@ $('.mid-left-btn').click(function(){
 	setTimeout(function(){$('.mid-left-btn').css('display','none')},1000)
 
 })
+
 $('.mid-right-btn').click(function(){
 	$('.mid-right-btn').animate({right:"100%"},{duration:100,queue:false})
 	$('.mid-left-btn').animate({left:"0"},{duration:100,queue:false})
