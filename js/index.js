@@ -38,5 +38,6 @@ var errorCallback = function(error){ alert(error.message)}
 
 $('.log-in').click(function(){
   var provider = new firebase.auth.FacebookAuthProvider();
-  firebase.auth().signInWithPopup(provider).catch(errorCallback)
+  firebase.auth().signInWithPopup(provider).catch(errorCallback);
+  console.log("click login");
 })
