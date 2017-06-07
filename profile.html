@@ -11,6 +11,7 @@
 
 </head>
 <body>
+
   <nav class="container-fluid my-nav">
     <a class="logo" href="./index.html">SKILL SWAP</a>
   </nav>
@@ -18,7 +19,7 @@
     <h2 class="text-center userName"></h2>
     <div class="row">
       <div class="col-md-offset-2 col-md-8 profile-top">
-        <h4 class="message-text">傳個訊息  給我吧</h4>
+        <h4 class="message-text">傳個訊息開始交換吧</h4>
         <div class="icon-border message">
           <img src="img/icon1.svg" alt="message me" width="35px">
         </div>
@@ -50,34 +51,56 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="firstLogin" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>填填你的基本資料吧</h4>
+          </div>
+          <form id="infoForm">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="yourName">你的大名</label><label style="color:red">*</label>
+                <input type="text" class="form-control" required="required" id="yourName">
+              </div>
+              <div class="form-group">
+                <label for="yourPhoto">你的美照</label>
+                <input type="file" id="yourPhoto">
+              </div>
+              <img src="" alt="" width="200px" height="200px">
+              <div class="form-group">
+                <label for="youCanChange">你可以交換的技能</label><label style="color:red">*</label>
+                <input type="text" class="form-control" required="required" id="youCanChange">
+              </div>
+              <div class="form-group">
+                <label for="youWantLearn">你想要學習的技能</label><label style="color:red">*</label>
+                <input type="text" class="form-control" required="required" id="youWantLearn">
+              </div>
+              <div class="form-group">
+                <label for="aboutYou">個人簡介</label><label style="color:red">*</label>
+                <textarea class="form-control" rows="5" required="required" id="aboutYou"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input type="submit" value="儲存" class="btn btn-default info-submit">
+            </div>
+          <form>
+        </div>
+      </div>
+    </div>
   </div>
 
 
   <div class="mid row col-md-12 col-sm-12 col-xs-12">
     <div class="mid-left-btn">
-      <h3>個人簡介</h3>
-    </div>
-    <div class="mid-right-btn">
       <h3>作品集</h3>
     </div>
-    <div class="mid-left col-md-12 col-sm-12 col-xs-12">
-      <h2 class="text-left personal">個人簡介</h2>
-      <p class="mid-left-content">你好，我是○○○，我對金融業有絕大的信心和熱忱，因為我擁有專業的金融知識，利用一年時間積
-        極考去取十張證照，在財務個案分析方面也有研究，另外也具有豐富的實習經驗(拿出財富管理競賽
-        作品、實習在職證明給面試官看) 我的個性是樂於與人相處的，服務客人時遇到不同情況也應對進
-        退得宜，凡事不斤斤計較，做事不拖泥帶水，在學校參與過許多活動，所以與人相處融洽是我能做
-        到的! 我所推崇的大人物為巴菲特，雖然他不是銀行家，但卻是我很推崇的專業投資人(備用人物:
-        彭淮南、威爾許、張忠謀、李昌鈺、陳嫦芬) 我會來爭取此次○○機會的原因為，我把自己當作商品
-        一樣來經營，必須要隨時(不斷地)更新、隨時進步，把每一次挑戰都當作是對自己的磨練，這就是
-        我的工作哲學有句話說:「當別人逃避，而你留下來挑戰，就能得到更上一層樓的機會。」這句話我
-        覺得很符合○○○○這工作的正面態度，希望進入貴公司可以秉持我的工作哲學以及座右銘面對挑戰，
-        貢獻所學並勝任愉快!
-      </p>
-
+    <div class="mid-right-btn">
+      <h3>個人簡介</h3>
     </div>
+    <div class="mid-left col-md-12 col-sm-12 col-xs-12">
 
-
-    <div class="mid-right col-md-12 col-sm-12 col-xs-12">
       <div class="mid-right-content">
         <div id=message></div>
         <input class="uploadb" type="file" accept="video/*" />
@@ -86,6 +109,13 @@
       </div>
       <h2 class="text-right feature">作品集</h2>
     </div>
+
+
+    <div class="mid-right col-md-12 col-sm-12 col-xs-12">
+      <h2 class="text-left personal">個人簡介</h2>
+      <p class="mid-left-content">
+      </p>
+    </div>
   </div>
 
     <div class="i-can-change col-md-12 col-sm-12 col-xs-12">
@@ -93,12 +123,12 @@
         <span class="glyphicon glyphicon-transfer" aria-hidden="true"></span>
         <h4>我可以交換</h4>
       </div>
-      <div class="i-want-content col-md-6 col-sm-6 col-xs-12">
+      <div class="i-want-content change-content col-md-6 col-sm-6 col-xs-12">
 
       </div>
     </div>
     <div class="i-want-learn col-md-12 col-sm-12 col-xs-12">
-      <div class="i-want-content col-md-6 col-sm-6 col-xs-12">
+      <div class="i-want-content learn-content col-md-6 col-sm-6 col-xs-12">
 
       </div>
       <div class="i-want-title col-md-6 col-sm-6 col-xs-12">
@@ -143,6 +173,7 @@
   </div>
   <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
   <script src="src/js/jquery-3.2.1.min.js"></script>
+  <script src="src/jquery-ui/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <script src="js/profile.js"></script>
