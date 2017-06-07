@@ -1,3 +1,4 @@
+//firebase
 var config = {
   apiKey: "AIzaSyCjkfmg2MFFocIDBdQuplLOOflyD2roLQM",
   authDomain: "sna-final.firebaseapp.com",
@@ -7,22 +8,55 @@ var config = {
   messagingSenderId: "296131393218"
 };
 firebase.initializeApp(config);
-var provider = new firebase.auth.FacebookAuthProvider();
+var provider    = new firebase.auth.FacebookAuthProvider();
 var db          = firebase.database() ;
 var rootRef     = db.ref() ;
 var usersRef    = db.ref("users");
+var store       = firebase.storage();
+var storeRef    = store.ref();
 
 
-	firebase.auth().onAuthStateChanged(function(user) {
-		console.log(user);
-		if(user){
-			$('.userName').text(user.displayName)
-		}else{
+firebase.auth().onAuthStateChanged(function(user) {
+  var currentUser = firebase.auth().currentUser;
+	if(user){
+		// $('.userName').text(user.displayName)
+    var currentUid = currentUser.uid
+    usersRef.once('value',function(snapShot){
+      var userInfo = snapShot.val()[currentUid].userInfo
 
-		}
-	})
-
-
+      //初次登入填表單
+      if(userInfo == undefined){
+        console.log("nice");
+        $('#firstLogin').modal({
+          backdrop: 'static',
+          keyboard: false
+        })
+        $('#infoForm').submit(function(){
+          var name = $('#yourName').val()
+          var change = $('#youCanChange').val().split(" ")
+          var learn = $('#youWantLearn').val().split(" ")
+          var aboutYou = $('#aboutYou').val()
+          usersRef.child(currentUid).update({
+            "userInfo":{
+              "name": name,
+              "youCanChange": change,
+              "youWantLearn": learn,
+              "aboutYou": aboutYou
+            }
+          })
+        })
+      }
+      //顯示資料
+      $('.userName').text(userInfo.name)
+      $('.mid-left-content').html(userInfo.aboutYou.replace(/\n/g,"<br />"))
+      $('.change-content').text(userInfo.youCanChange)
+      $('.learn-content').text(userInfo.youWantLearn)
+    })
+}else{
+  alert("您尚未登入")
+}
+})
+//上傳作品
 var localFileVideoPlayer =function(){
 	'use strict'
   var URL = window.URL || window.webkitURL
@@ -52,6 +86,7 @@ var localFileVideoPlayer =function(){
   inputNode.addEventListener('change', playSelectedFile, false)
 }
 
+//中間捲軸動畫
 $('.message').hover(function(){
 	$('.message-text').css('opacity',1);
 },function(){
