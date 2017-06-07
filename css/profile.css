@@ -94,7 +94,7 @@ body{
   top: 35%;
   left: 0;
   width: 40px;
-  height: 150px;
+  height: 130px;
   border: 2px solid #f5f5f5;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -107,7 +107,7 @@ body{
   opacity: 1;
 }
 .mid-left-btn h3{
-  opacity: 0;
+  opacity: 0.3;
 }
 .mid-right{
   display: flex;
@@ -123,7 +123,7 @@ body{
   top: 35%;
   right: 0;
   width: 40px;
-  height: 130px;
+  height: 150px;
   border: 2px solid #bbbbbb;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -137,13 +137,14 @@ body{
   opacity: 1;
 }
 .mid-right-btn h3{
-  opacity: 0;
+  opacity: 0.3;
 }
 .personal{
   flex: 2;
 }
 .mid-left-content{
   flex: 5;
+  font-size: 20px;
 }
 .mid-right-content{
   flex: 1;
@@ -170,6 +171,7 @@ video {
 /*==================================I WANT====================================*/
 .i-can-change{
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 .i-want-learn{
   margin-bottom: 100px;
@@ -196,8 +198,11 @@ video {
   margin: auto 50px
 }
 .i-want-content{
-  opacity: 0;
   height: 300px;
+  padding-top: 100px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
 }
 
 /*==================================BOTTOM====================================*/

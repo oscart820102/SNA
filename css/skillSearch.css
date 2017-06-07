@@ -69,7 +69,7 @@ nav h1 {
   transform: translateX(0);
 }
 .animation-swipe.favorite {
-  color: yellow !important;
+  color: white !important;
 }
 .animation-swipe.favorite:before {
   -webkit-transform: translateX(0);
@@ -77,10 +77,20 @@ nav h1 {
 }
 
 .item {
+  position: relative;
   margin: 30px 10px;
   padding: 10px;
   background: white;
   border-left: 30px solid #3fcec9;
+  box-shadow: 3px 1px 3px #c6c6c6;
+  border-radius: 4px;
+}
+.suggestion{
+  margin: 30px 10px;
+  padding: 10px;
+  background: white;
+  border-right: 30px solid #3fcec9;
+  border-left: 0;
   box-shadow: 3px 1px 3px #c6c6c6;
   border-radius: 4px;
 }
@@ -124,4 +134,13 @@ nav h1 {
   background-color: #f5f5f5;
   box-shadow: 0 0 2px #808080 inset;
   border-radius: 5px;
+}
+.articlePublished{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.change-btn{
+  position: absolute;
+  right: 10px;
+  bottom: 25px;
 }
