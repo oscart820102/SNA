@@ -7,6 +7,7 @@ var config = {
   storageBucket: "sna-final.appspot.com",
   messagingSenderId: "296131393218"
 };
+
 firebase.initializeApp(config);
 var provider = new firebase.auth.FacebookAuthProvider();
 var db          = firebase.database() ;
